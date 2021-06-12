@@ -37,15 +37,30 @@
 <!-- --------SINGLE product details ----------- -->
 
 
-    <div class="small-container">
+    <div class="small-container single-product">
         <div class="row">
             <div class="col-2">
-                <img src="/images/gallery-1.jpg" width="100%">
+                <img src="images/gallery-1.jpg" id="productImg" width="100%">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/gallery-1.jpg" class="smallImg" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/gallery-2.jpg" class="smallImg" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/gallery-3.jpg" class="smallImg" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/gallery-4.jpg" class="smallImg" width="100%">
+                    </div>
+                </div>
             </div>
             <div class="col-2">
                 <p>Home / Tshirt</p>
-                <h1>Red Pinted tshirt</h1>
-                <h4>Rs 500</h4>
+                <h2>Mast & Harbour</h2>
+                <h3>Red Pinted Round Neck T-shirt</h3>
+                <h4>Rs. 500</h4>
                 <select>
                     <option value="">Select Size</option>
                     <option value="">XXL</option>
@@ -57,13 +72,24 @@
                 <input type="number" value="1">
                 <a href="" class="btn">Add to Cart</a>
 
-                        <h3>Product Details</h3>
+                        <h3>Product Details <span class="fa fa-indent "></span></h3>
+                        <br>
                         <p>Elegance with a touch of artistry, this kurta set is perfect to amp-up your personal style on the ethnic front. Decked with intricate paisley floral designs and dainty mirror work on the classic midnight blue base, its beauty lies
                             its minimalism. With the smart styling of a faux buttoned front and the accompaniment of a high ankle length breezy palazzos, this kurta set is the epitomy of style meets traditions!
                         </p>
+            </div>
         </div>
     </div>
+
+
+    <!-- ------- title ----------- -->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
     </div>
+
 
     <div class="small-container ">
         <div class="row ">
@@ -163,9 +189,9 @@
 
     <!-- ------- js for toggle menu --------- -->
     <script>
-        var MenuItems = document.getElementById("MenuItems ");
+        var MenuItems = document.getElementById("MenuItems");
 
-        MenuItems.style.maxHeight = "0px ";
+        MenuItems.style.maxHeight = "0px";
 
         function menutoggle() {
             if (MenuItems.style.maxHeight == "0px ") {
@@ -177,6 +203,25 @@
     </script>
 
 
+    <!-- ------- js for product gallery --------- -->
+
+    <script>
+        let productImg = document.getElementById("productImg");
+        let smallImg = document. getElementsByClassName("smallImg");
+
+        smallImg[0].onclick = function(){
+            productImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function(){
+            productImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function(){
+            productImg.src = smallImg[2].src;
+        }
+        smallImg[3].onclick = function(){
+            productImg.src = smallImg[3].src;
+        }
+    </script>
 
 </body>
 
